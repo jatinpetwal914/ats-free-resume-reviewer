@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "buildCommand": "cd function && npm install && npm run build",
-  "outputDirectory": "frontend/public",
-  "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "public" }
+  "buildCommand": "npm install && cd function && npm install && npm run build",
+  "public": "frontend/public",
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs18.x"
     }
-  ],
+  },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
   "headers": [
     {
