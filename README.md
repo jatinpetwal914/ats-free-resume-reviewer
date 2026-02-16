@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎯 RESUME AI HELPER - QUICK START
 
 ## ⚡ 30-Second Setup
@@ -260,3 +261,7 @@ Check these files for more details:
 cd function && node server.js
 ```
 
+=======
+# ats-free-resume-reviewer
+provide suggestions to make a ats free resume checker 
+>>>>>>> 4eae2df70447643cb8ca3ce389537b59fc7204b0
