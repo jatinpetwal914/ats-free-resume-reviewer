@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm install && cd function && npm install && npm run build",
+  "buildCommand": "npm install",
   "public": "frontend/public",
   "functions": {
     "api/**/*.ts": {

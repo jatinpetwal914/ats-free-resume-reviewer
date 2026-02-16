@@ -8,7 +8,8 @@
     "build:all": "npm install && cd function && npm install && npm run build",
     "dev": "cd function && node server.js",
     "start": "cd function && node server.js",
-    "build:function": "cd function && npm install && npm run build"
+    "build:function": "cd function && npm install && npm run build",
+    "type-check": "tsc --noEmit -p ."
   },
   "keywords": [
     "resume",
