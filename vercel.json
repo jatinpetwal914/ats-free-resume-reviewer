@@ -1,15 +1,19 @@
 {
   "version": 2,
-  "buildCommand": "npm install",
-  "public": "frontend/public",
+  "buildCommand": "cd function && npm install && npm run build",
+  "outputDirectory": "frontend/public",
   "functions": {
     "api/**/*.ts": {
-      "runtime": "nodejs18.x"
+      "runtime": "nodejs18"
     }
   },
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ],

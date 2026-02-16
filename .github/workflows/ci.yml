@@ -24,12 +24,12 @@ jobs:
           cache: 'npm'
 
       - name: Install root dependencies
-        run: npm install
+        run: npm ci
 
       - name: Install function dependencies
         run: |
           cd function
-          npm install
+          npm ci
 
       - name: Build function
         run: |
@@ -37,4 +37,4 @@ jobs:
           npm run build
 
       - name: Run TypeScript compile (monorepo)
-        run: npx tsc --noEmit -p .
+        run: npx tsc -p .
